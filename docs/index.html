@@ -1,9 +1,198 @@
-<html>
-   <head>
-    <title>Test Page</title>
-    </head> 
-    <body
-        <h1>Welcome to the Test Page - 00000</h1>
-        <p>This is a simple HTML page for testing purposes.</p>
-    </body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GH-900 | GitHub Foundations 수업 페이지</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+      color: #c9d1d9;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(90deg, #238636, #1f6feb);
+      padding: 2rem 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.4rem;
+      color: #ffffff;
+      margin-bottom: 0.3rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #ffffffcc;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* 화이팅 메시지 */
+    .cheering {
+      background: #1c2333;
+      border-left: 4px solid #238636;
+      border-radius: 8px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+    .cheering .emoji { font-size: 2.5rem; margin-bottom: 0.6rem; }
+    .cheering h2 {
+      font-size: 1.5rem;
+      color: #58a6ff;
+      margin-bottom: 0.6rem;
+    }
+    .cheering p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #c9d1d9;
+    }
+
+    /* 링크 카드 */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .card {
+      background: #21262d;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #58a6ff;
+    }
+    .card .icon { font-size: 2.2rem; margin-bottom: 0.8rem; }
+    .card h3 {
+      font-size: 1.2rem;
+      color: #f0f6fc;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 0.92rem;
+      color: #8b949e;
+      margin-bottom: 1.2rem;
+      line-height: 1.5;
+    }
+    .card a {
+      display: inline-block;
+      background: #238636;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 0.55rem 1.4rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .card a:hover { background: #2ea043; }
+
+    /* 과정 소개 */
+    .about {
+      background: #21262d;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .about h2 {
+      font-size: 1.3rem;
+      color: #58a6ff;
+      margin-bottom: 1rem;
+    }
+    .about ul {
+      list-style: none;
+      padding: 0;
+    }
+    .about ul li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #30363d;
+      font-size: 0.95rem;
+    }
+    .about ul li:last-child { border-bottom: none; }
+    .about ul li::before {
+      content: '✅ ';
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #484f58;
+      font-size: 0.85rem;
+    }
+    footer a { color: #58a6ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🐙 GH-900: GitHub Foundations</h1>
+    <p>GitHub을 이해하고 활용하기 위한 첫 걸음</p>
+  </header>
+
+  <div class="container">
+
+    <!-- 화이팅 메시지 -->
+    <section class="cheering">
+      <div class="emoji">🚀🔥💪</div>
+      <h2>함께라면 어렵지 않아요!</h2>
+      <p>
+        GH-900 과정에 오신 걸 환영합니다! 🎉<br>
+        Git과 GitHub, 처음엔 낯설 수 있지만 하나씩 같이 해보면 금방 익숙해질 거예요.<br>
+        오늘부터 우리 모두 GitHub 마스터가 되는 그날까지 — <strong>화이팅! 🙌</strong>
+      </p>
+    </section>
+
+    <!-- 주요 링크 카드 -->
+    <section class="cards">
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>GH-900 과정</h3>
+        <p>GitHub Foundations 과정 페이지에서 커리큘럼과 학습 목표를 확인하세요.</p>
+        <a href="https://learn.microsoft.com/en-us/training/paths/github-foundations/" target="_blank">과정 바로가기 →</a>
+      </div>
+      <div class="card">
+        <div class="icon">🏆</div>
+        <h3>GitHub 인증</h3>
+        <p>GitHub Foundations 자격 인증 시험 정보와 등록 방법을 확인하세요.</p>
+        <a href="https://resources.github.com/learn/certifications/" target="_blank">인증 바로가기 →</a>
+      </div>
+      <div class="card">
+        <div class="icon">🎓</div>
+        <h3>Microsoft Learn</h3>
+        <p>Microsoft Learn에서 제공하는 GitHub 관련 무료 학습 콘텐츠를 활용하세요.</p>
+        <a href="https://learn.microsoft.com/en-us/training/github/" target="_blank">Learn 바로가기 →</a>
+      </div>
+    </section>
+
+    <!-- 과정 소개 -->
+    <section class="about">
+      <h2>📋 이 과정에서 배우는 것들</h2>
+      <ul>
+        <li>Git &amp; GitHub 기본 개념과 워크플로우</li>
+        <li>리포지토리 생성, 브랜치, 커밋, 풀 리퀘스트</li>
+        <li>GitHub Issues &amp; Projects를 활용한 협업</li>
+        <li>GitHub Actions 기초 — CI/CD 자동화</li>
+        <li>GitHub Pages를 이용한 정적 웹사이트 배포</li>
+        <li>오픈소스 기여 방법과 커뮤니티 참여</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2026 GH-900 수업 페이지 · Built with ❤️ and <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+  </footer>
+
+</body>
 </html>
